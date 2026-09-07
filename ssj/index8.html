@@ -818,11 +818,8 @@
     body.classList.remove('loading');
     if(window.__intro)window.__intro.play();
   };
-  if(reduced||mobile.matches){hideLoader()}
-  else{
-    addEventListener('load',()=>setTimeout(hideLoader,Math.max(0,2400-(performance.now()-t0))));
-    setTimeout(hideLoader,6500);
-  }
+  addEventListener('load',()=>setTimeout(hideLoader,Math.max(0,2400-(performance.now()-t0))));
+  setTimeout(hideLoader,6500);
 
   /* nav + mobile bar */
   const nav=document.getElementById('nav');
